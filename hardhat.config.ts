@@ -1,5 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-verify";
+import "@nomiclabs/hardhat-ethers";
+import "@openzeppelin/hardhat-upgrades";
 import { PRIVATE_KEY,INFURA_API_KEY,ETHERSCAN_API_KEY} from "./secret.json";
 
 const config: HardhatUserConfig = {
@@ -13,9 +15,7 @@ const config: HardhatUserConfig = {
   },
 
   etherscan: {
-    apiKey: {
-      sepolia : ETHERSCAN_API_KEY
-    }
+    apiKey: ETHERSCAN_API_KEY
   },
 
   sourcify: {

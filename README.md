@@ -11,18 +11,22 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 ```
 
-Compile a smart contract
-- npx hardhat compile
+# Smart Contract Compilation, Deployment, and Verification
 
-Deploy in local hardhat network:
-- npx hardhat node
-- npx hardhat run --network localhost scripts/deploy.ts 
-or 
-- npx hardhat run scripts/deploy.ts
+## Compile a Smart Contract
+npx hardhat compile
 
-Deploy in live blockchain network
-- npx hardhat run scripts/deploy.ts --network <network-name>
+## Deploying to the Local Hardhat Network
+npx hardhat node
+npx hardhat run --network localhost scripts/deploy.ts
+# or
+npx hardhat run scripts/deploy.ts
 
-Verify a smart contract
-- npx hardhat verify --network <network-name> <contract-address> <constructor-arguments>
-- npx hardhat verify --constructor-args arguments.js <DEPLOYED_CONTRACT_ADDRESS>
+## Deployment on a Live Blockchain Network
+npx hardhat run scripts/deploy.ts --network <network-name>
+
+## Verify a Smart Contract
+npx hardhat verify --network <network-name> <contract-address> <constructor-arguments>
+
+Complex Constructor Arguments
+npx hardhat verify --constructor-args arguments.ts <DEPLOYED_CONTRACT_ADDRESS>
