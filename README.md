@@ -23,10 +23,10 @@ npx hardhat run --network localhost scripts/deploy.ts
 npx hardhat run scripts/deploy.ts
 
 ## Deployment on a Live Blockchain Network
-npx hardhat run scripts/deploy.ts --network <network-name>
+npx hardhat run scripts/deploy.ts --network network-name
 
 ## Verify a Smart Contract
-npx hardhat verify --network <network-name> <contract-address> <constructor-arguments>
+npx hardhat verify --network network-name contract-address constructor-arguments
 
-Complex Constructor Arguments
-npx hardhat verify --constructor-args arguments.ts <DEPLOYED_CONTRACT_ADDRESS>
+# Complex Constructor Arguments
+npx hardhat verify --constructor-args arguments.ts DEPLOYED_CONTRACT_ADDRESS
